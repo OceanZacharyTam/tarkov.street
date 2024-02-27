@@ -25,6 +25,7 @@ document.addEventListener('touchstart', (e)=>{
     touchstart_y = e.touches[0].clientY})
 
 document.addEventListener('touchend',(e)=>{
+    e.preventDefault()
     touchend_x = e.changedTouches[0].clientX
     touchend_y = e.changedTouches[0].clientY
     scroll_X = window.scrollX
@@ -44,7 +45,8 @@ document.addEventListener('touchend',(e)=>{
 
     quadrant_3 = (touchend_x<0.5*window_innerWidth && touchend_y>0.5*window_innerHeight) //為方便單手使用，只有點觸控象限3時才是落樓
     if (finger_no_move && !quadrant_3){moveFloor(true)}
-    else if (finger_no_move && quadrant_3){moveFloor(false)}})
+    else if (finger_no_move && quadrant_3){moveFloor(false)}},
+    {passive: false})
 
 // 用鍵盤
 document.addEventListener('keypress', (e)=>{
