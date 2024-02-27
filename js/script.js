@@ -32,7 +32,7 @@ document.addEventListener('touchend',(e)=>{
     // scroll_Y = window.scrollY
     window_innerWidth = window.innerWidth
     window_innerHeight = window.innerHeight
-    finger_no_move = (Math.abs(touchstart_x-touchend_x)+Math.abs(touchstart_y-touchend_y)) == 0
+    finger_no_move = (touchend_x == touchstart_x) && (touchend_y == touchstart_y)
 
     // document.getElementById('y').innerHTML= 'touchstart_x = ' + touchstart_x
     //                                         +'<br>touchstart_y = ' + touchstart_y
