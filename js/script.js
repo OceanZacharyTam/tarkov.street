@@ -23,7 +23,7 @@ document.addEventListener('touchend',(e)=>{
     touchend_y = e.changedTouches[0].clientY
     finger_no_move = (touchend_x == touchstart_x) && (touchend_y == touchstart_y)
 
-    if (window.innerWidth>window.innerHeight){quadrant_3_height = 0.75} else {quadrant_3_height = 0.5} //方便打橫時使用
+    if (window.innerWidth>window.innerHeight){quadrant_3_height = 0.75} else {quadrant_3_height = 0} //方便打橫時使用
     quadrant_3 = (touchend_x<0.5*window.innerWidth && touchend_y>quadrant_3_height*window.innerHeight) //為方便單手使用，只有點觸控象限3時才是落樓
     if (finger_no_move && !quadrant_3){moveFloor(true)}
     else if (finger_no_move && quadrant_3){moveFloor(false)}},
