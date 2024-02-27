@@ -1,9 +1,9 @@
-var map = document.getElementById('map')
-var one = document.getElementById('one');
-var two = document.getElementById('two');
-var three = document.getElementById('three');
-var four = document.getElementById('four');
-var five = document.getElementById('five');
+// var map = document.getElementById('map')
+// var one = document.getElementById('one');
+// var two = document.getElementById('two');
+// var three = document.getElementById('three');
+// var four = document.getElementById('four');
+// var five = document.getElementById('five');
 
 var viewfloor = 1;
 var UPfloor = true;
@@ -28,8 +28,8 @@ document.addEventListener('touchend',(e)=>{
     e.preventDefault()
     touchend_x = e.changedTouches[0].clientX
     touchend_y = e.changedTouches[0].clientY
-    scroll_X = window.scrollX
-    scroll_Y = window.scrollY
+    // scroll_X = window.scrollX
+    // scroll_Y = window.scrollY
     window_innerWidth = window.innerWidth
     window_innerHeight = window.innerHeight
     finger_no_move = (Math.abs(touchstart_x-touchend_x)+Math.abs(touchstart_y-touchend_y)) == 0
