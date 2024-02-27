@@ -12,10 +12,10 @@ var ChangeV = false;
 
 function moveFloor(UPfloor){
     if (UPfloor){
-        if (viewfloor >= 5){viewfloor = 0}
+        if (viewfloor >= 6){viewfloor = 0}
         viewfloor ++}
     else {
-        if (viewfloor <= 1){viewfloor = 6}
+        if (viewfloor <= 1){viewfloor = 7}
         viewfloor --}
     document.getElementById('one').src = './map/'+viewfloor+'.jpg'}
 
